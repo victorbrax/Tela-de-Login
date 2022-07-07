@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tela de Login</title>
+</head>
+<body>
+    <div class ="main-login">
+        <div class ="left-login">
+            <h1>Faça login antes<br>de acessar o painel!</h1>
+            <img src="personagem.svg" class="left-login-image" alt="Personagem Animado!">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>CALMA AÍ, CAMARADA!</h1>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" id="User" placeholder="Usuário">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="Pass" placeholder="Senha">
+                </div>
+                <button class="btn-login" onclick="logar()">ENTRAR NO SISTEMA!</button>
+                <h4 id="notaccount">Ainda não tem uma conta?</h4>
+            </div>
+        </div>
+    </div>   
+    
+    <script>
+        function logar(){
+            var usuario = document.getElementById('User').value;
+            var senha = document.getElementById('Pass').value;
+
+            if(usuario == "admin" && "admin"){
+                window.alert('Sucesso!');
+                location.href = "home.html";
+            }
+            else{
+                window.alert('Usuário ou senha incorretos.')
+            }
+        }
+    </script>
+</body>
+</html>
